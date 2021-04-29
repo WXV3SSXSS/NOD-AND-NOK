@@ -12,12 +12,12 @@ namespace NOD_AND_NOK
 {
     public partial class NOD_AND_NOK : Form
     {
-        int A, B, R;
+        long A, B, R;
         int d = 0;
-        int AB = 1;
+        long AB = 1;
         private void button2_Click(object sender, EventArgs e)
         {  
-            int m = Convert.ToInt32(textBox5.Text);
+            long m = Convert.ToInt64(textBox5.Text);
             dataGridView1.RowCount++;
             dataGridView1[0, d].Value = m;
             d++;
@@ -26,11 +26,11 @@ namespace NOD_AND_NOK
 
         private void button1_Click(object sender, EventArgs e)
         {
-            A = Math.Abs(Convert.ToInt32(dataGridView1[0, 0].Value));
+            A = Math.Abs(Convert.ToInt64(dataGridView1[0, 0].Value));
             AB = A * AB;
             for (int i = 1; i < d-1; i++)
             {
-                B = Math.Abs(Convert.ToInt32(dataGridView1[0, i + 1].Value));
+                B = Math.Abs(Convert.ToInt64(dataGridView1[0, i + 1].Value));
                 AB = AB * B;
                 while (B != 0)
                 {
