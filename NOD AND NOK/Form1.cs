@@ -38,7 +38,7 @@ namespace NOD_AND_NOK
                     A = B;
                     B = R;
                 }
-
+                AB = AB / A;
             }
             AB = AB * A;
 
