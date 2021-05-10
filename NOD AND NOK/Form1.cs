@@ -20,9 +20,15 @@ namespace NOD_AND_NOK
             long m = Convert.ToInt64(textBox5.Text);
             dataGridView1.RowCount++;
             dataGridView1[0, d].Value = m;
-           
             d++;
-          
+        }
+    
+        private void textBox5_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button2_Click(null, null);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
